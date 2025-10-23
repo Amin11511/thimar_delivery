@@ -63,12 +63,19 @@ Thimar Driver enables delivery partners to handle all delivery operations in one
 
 ---
 
-![Screen 1](assets/images/screen_1.png)
-![Screen 2](assets/images/screen_2.png)
-![Screen 3](assets/images/screen_3.png)
-![Screen 4](assets/images/screen_4.png)
-![Screen 5](assets/images/screen_5.png)
-![Screen 6](assets/images/screen_6.png)
+## 📱 App Screenshots
+
+<p align="center">
+  <img src="assets/images/screen_1.png" width="250" style="margin:10px;">
+  <img src="assets/images/screen_2.png" width="250" style="margin:10px;">
+  <img src="assets/images/screen_3.png" width="250" style="margin:10px;">
+</p>
+
+<p align="center">
+  <img src="assets/images/screen_4.png" width="250" style="margin:10px;">
+  <img src="assets/images/screen_5.png" width="250" style="margin:10px;">
+  <img src="assets/images/screen_6.png" width="250" style="margin:10px;">
+</p>
 
 ---
 
