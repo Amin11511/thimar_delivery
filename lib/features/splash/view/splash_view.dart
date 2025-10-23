@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:thimar_driver/core/routing/app_routes_fun.dart';
 import 'package:thimar_driver/core/routing/routes.dart';
 import '../../../core/theming/app_assets.dart';
@@ -37,6 +38,7 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
     _navigate();
     logger.w(UserModel.i.isAuth);
 
+    _requestLocationPermission();
   }
 
   Future<void> _navigate() async {
@@ -48,6 +50,19 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
       pushAndRemoveUntil(NamedRoutes.bottomNavBarLayout);
     } else {
       pushAndRemoveUntil(NamedRoutes.login);
+    }
+  }
+
+  Future<void> _requestLocationPermission() async {
+    final status = await Permission.location.request();
+
+    if (status.isGranted) {
+      debugPrint('✅ Location permission granted');
+    } else if (status.isDenied) {
+      debugPrint('❌ Location permission denied');
+    } else if (status.isPermanentlyDenied) {
+      debugPrint('🚫 Permission permanently denied. Opening settings...');
+      await openAppSettings();
     }
   }
 

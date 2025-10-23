@@ -5,6 +5,7 @@ class ApiConstants {
   static const String pendingOrdersEp = 'driver/pending_orders';
   static String orderDetailsEp(int id) => 'driver/orders/$id';
   static const String currentOrderEp = 'driver/current_orders';
+  static const String finishedOrderEp = 'driver/finished_orders';
   static const String getProfileEP = 'driver/profile';
   static const String aboutAppEP = 'about';
   static const String termsEP = 'policy';
@@ -16,5 +17,4 @@ class ApiConstants {
   static const String resetPasswordEP = 'reset_password';
   static const String checkCodeEP = 'check_code';
   static const String notificationsEP = 'notifications';
-
 }
